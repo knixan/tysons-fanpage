@@ -1,10 +1,11 @@
 // components/AboutSection.tsx
-import { Dog, Heart, Star } from "lucide-react";
+import { Dog, Heart, Star, Cake } from "lucide-react";
 import Image from "next/image";
-const portraitImage = "/tyson-profil.png";
+const portraitImage = "/tyson12år.png";
 
 const facts = [
   { icon: Dog, label: "Ras", value: "Svart Labrador" },
+  { icon: Cake, label: "Ålder", value: "12 år (84 hundår)" },
   { icon: Heart, label: "Personlighet", value: "Lojal & Gosig" },
   { icon: Star, label: "Favoritaktivitet", value: "Bada, äta & sova" },
 ];
@@ -14,17 +15,17 @@ const AboutSection = () => {
     <section className="py-24">
       <div className="container mx-auto px-6">
         <div className="grid items-center gap-16 md:grid-cols-2">
-          <div className="overflow-hidden rounded-[var(--radius)]">
-            <div className="relative aspect-square w-full">
-              <Image
-                src={portraitImage}
-                alt="Tyson porträtt"
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-105"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
-            </div>
-          </div>
+       <div className="overflow-hidden rounded-[var(--radius)]">
+  <div className="relative aspect-[3/4] w-full">
+    <Image
+      src={portraitImage}
+      alt="Tyson porträtt"
+      fill
+      className="object-cover transition-transform duration-700 hover:scale-105"
+      sizes="(min-width: 768px) 50vw, 100vw"
+    />
+  </div>
+</div>
 
           <div>
             <p className="mb-2 font-body text-sm font-semibold uppercase tracking-[0.3em] text-primary">
@@ -42,7 +43,7 @@ const AboutSection = () => {
               hjärta.
             </p>
 
-            <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {facts.map((fact) => (
                 <div
                   key={fact.label}
