@@ -18,6 +18,7 @@ export default function Page() {
           Gjord med <Heart className="h-4 w-4 fill-primary text-primary" /> för
           Tyson
         </p>
+        <p className="mt-2 font-body text-xs text-muted-foreground">Kod och design av Josefine Eriksson - <a href="kodochdesign.se" className="underline hover:text-primary">kodochdesign.se</a></p>  
       </footer>
     </div>
   );
